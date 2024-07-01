@@ -1,0 +1,9 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://cldxetoxn262d"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://b43d88nj51w0e" path="res://scenes/entity/player/pelki_skel/hero_pelki.atlas" id="1_jvcxd"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://blpbumgfq8flf" path="res://scenes/entity/player/pelki_skel/hero_pelki.skel" id="2_3n7ac"]
+
+[resource]
+atlas_res = ExtResource("1_jvcxd")
+skeleton_file_res = ExtResource("2_3n7ac")
+default_mix = 0.2

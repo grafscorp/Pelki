@@ -1,0 +1,20 @@
+plant water.png
+size:492,268
+filter:Linear,Linear
+pma:true
+sheet 1
+bounds:2,169,40,422
+offsets:0,3,40,428
+rotate:90
+sheet 2
+bounds:2,2,37,352
+rotate:90
+sheet 3
+bounds:2,211,55,488
+rotate:90
+sheet 4
+bounds:2,41,65,346
+rotate:90
+sheet 5
+bounds:2,108,59,390
+rotate:90

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dutxe0n6yvb7w"]
+
+[ext_resource type="PackedScene" uid="uid://ps5ccro24iax" path="res://worlds/StartLevel/Tiles/tile_BLACKcube_2.tscn" id="1_ky5qp"]
+
+[node name="TileCube3" instance=ExtResource("1_ky5qp")]
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 8)
+disabled = true

@@ -1,0 +1,195 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqpqg72nbdklu"]
+
+[ext_resource type="Script" path="res://UI/HUD/hud.gd" id="1_coan0"]
+[ext_resource type="Texture2D" uid="uid://m0le6fudh4n" path="res://UI/HUD/assets/seep.png" id="1_r721a"]
+[ext_resource type="Texture2D" uid="uid://qq7lph08b14b" path="res://UI/HUD/assets/hit.png" id="2_yfhvw"]
+[ext_resource type="Script" path="res://joystick/virtual_joystick.gd" id="3_mrfxp"]
+[ext_resource type="Texture2D" uid="uid://dhwnnd0gpj20b" path="res://UI/HUD/assets/joystick.png" id="4_pxkmx"]
+[ext_resource type="Texture2D" uid="uid://dterh0hyf5sd4" path="res://UI/HUD/assets/joystick2.png" id="5_vi6te"]
+[ext_resource type="Texture2D" uid="uid://df2dm8fvr2q3y" path="res://UI/HUD/assets/energy.png" id="6_vcg7e"]
+[ext_resource type="Texture2D" uid="uid://dqnc5e8s6fmmh" path="res://UI/HUD/assets/energy2.png" id="7_n3v6r"]
+[ext_resource type="Texture2D" uid="uid://og7oau7ydlpt" path="res://UI/HUD/assets/health.png" id="8_v624d"]
+[ext_resource type="Texture2D" uid="uid://bjrj1drinombp" path="res://UI/HUD/assets/health2.png" id="9_4o5cr"]
+[ext_resource type="Texture2D" uid="uid://bddtanqgkwiju" path="res://UI/HUD/assets/1.png" id="10_6gaot"]
+[ext_resource type="Texture2D" uid="uid://3andnyfpdo1a" path="res://UI/HUD/assets/keyKey.png" id="11_yt8aw"]
+[ext_resource type="PackedScene" uid="uid://qdf7g0h4dai6" path="res://UI/PauseMenu/game_menu.tscn" id="12_7kqld"]
+
+[node name="HUD" type="CanvasLayer" node_paths=PackedStringArray("EBar", "HBar", "gameMenu", "keyView1", "keyView2", "keyView3", "joystick", "seepBTN")]
+process_mode = 3
+script = ExtResource("1_coan0")
+EBar = NodePath("Bars/EnergyBar")
+HBar = NodePath("Bars/HealthBar")
+gameMenu = NodePath("GameMenu")
+keyView1 = NodePath("Keys/Key1")
+keyView2 = NodePath("Keys/Key2")
+keyView3 = NodePath("Keys/Key3")
+joystick = NodePath("Virtual Joystick")
+seepBTN = NodePath("Button/SeepBTN")
+
+[node name="Button" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = -125.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="SeepBTN" type="TouchScreenButton" parent="Button"]
+visible = false
+position = Vector2(-106, -171)
+scale = Vector2(1.28986, 1.28986)
+texture_normal = ExtResource("1_r721a")
+action = "seep"
+metadata/_edit_lock_ = true
+
+[node name="Attack2" type="TouchScreenButton" parent="Button"]
+position = Vector2(-106, -419)
+scale = Vector2(1.28986, 1.28986)
+texture_normal = ExtResource("2_yfhvw")
+action = "attack2"
+metadata/_edit_lock_ = true
+
+[node name="JumpBTN" type="TouchScreenButton" parent="Button"]
+position = Vector2(-354, -347)
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("2_yfhvw")
+action = "jump"
+
+[node name="Virtual Joystick" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 138.0
+offset_top = -391.0
+offset_right = 438.0
+offset_bottom = -91.0
+grow_vertical = 0
+script = ExtResource("3_mrfxp")
+action_left = "left"
+action_right = "right"
+action_up = "up"
+action_down = "down"
+metadata/_edit_use_anchors_ = true
+
+[node name="Base" type="TextureRect" parent="Virtual Joystick"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.0
+offset_top = -203.0
+offset_right = 203.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+mouse_force_pass_scroll_events = false
+texture = ExtResource("4_pxkmx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tip" type="TextureRect" parent="Virtual Joystick/Base"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -63.0
+offset_right = 63.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(63, 63)
+texture = ExtResource("5_vi6te")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Bars" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 93.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthBar" type="TextureProgressBar" parent="Bars"]
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 500.0
+step = 0.1
+value = 25.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_over = ExtResource("8_v624d")
+texture_progress = ExtResource("9_4o5cr")
+metadata/_edit_use_anchors_ = true
+
+[node name="EnergyBar" type="TextureProgressBar" parent="Bars"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0537634
+anchor_top = -0.152174
+anchor_right = -0.0537634
+anchor_bottom = -0.152174
+offset_right = 500.0
+offset_bottom = 500.0
+step = 0.1
+value = 9.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_over = ExtResource("6_vcg7e")
+texture_progress = ExtResource("7_n3v6r")
+metadata/_edit_use_anchors_ = true
+
+[node name="Keys" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_top = 0.373611
+anchor_right = 0.0347656
+anchor_bottom = 0.626389
+offset_top = 63.0
+offset_right = 40.0
+offset_bottom = 103.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Key1" type="TextureRect" parent="Keys"]
+layout_mode = 2
+texture = ExtResource("11_yt8aw")
+
+[node name="Key2" type="TextureRect" parent="Keys"]
+layout_mode = 2
+texture = ExtResource("11_yt8aw")
+
+[node name="Key3" type="TextureRect" parent="Keys"]
+layout_mode = 2
+texture = ExtResource("11_yt8aw")
+
+[node name="MenuBTN" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" type="TouchScreenButton" parent="MenuBTN"]
+position = Vector2(-192, 64)
+scale = Vector2(2.1282, 2.1282)
+texture_normal = ExtResource("10_6gaot")
+action = "escape"
+
+[node name="GameMenu" parent="." instance=ExtResource("12_7kqld")]
+visible = false

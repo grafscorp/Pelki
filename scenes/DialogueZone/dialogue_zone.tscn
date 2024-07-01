@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://sid0oh1mbb1g"]
+
+[ext_resource type="Script" path="res://scenes/DialogueZone/dialogue_zone.gd" id="1_rxbxm"]
+
+[node name="DialogueZone" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_rxbxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+debug_color = Color(0.156863, 1, 0, 0.419608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

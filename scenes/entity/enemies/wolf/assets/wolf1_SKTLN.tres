@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://cgcp4fwsrlq6x"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://cjq7w6j8de1en" path="res://scenes/entity/enemies/wolf/assets/wolf_active.atlas" id="1_lpda7"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://djc7q4p3bhso" path="res://scenes/entity/enemies/wolf/assets/wolf_active.skel" id="2_fo4ob"]
+
+[resource]
+atlas_res = ExtResource("1_lpda7")
+skeleton_file_res = ExtResource("2_fo4ob")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://h6vkjkl5fcns"]
+
+[ext_resource type="PackedScene" uid="uid://d0tm66ubik0jo" path="res://scenes/Objects/classObject/object.tscn" id="1_rx3i2"]
+[ext_resource type="Texture2D" uid="uid://bvplif6u6wj7b" path="res://scenes/Objects/HPObject/light 2.png" id="2_hiiy0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_37njb"]
+
+[node name="HP_object" instance=ExtResource("1_rx3i2")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_37njb")
+debug_color = Color(1, 0, 1, 0.419608)
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_hiiy0")

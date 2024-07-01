@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dapfrs7jj7yop"]
+
+[ext_resource type="Texture2D" uid="uid://b63n2f53a4j7f" path="res://assets/enviroment/Tiles/cu.png" id="1_42d4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsogq"]
+size = Vector2(456, 432)
+
+[node name="TileCube1" type="StaticBody2D"]
+
+[node name="Cu" type="Sprite2D" parent="."]
+position = Vector2(-4, -13)
+texture = ExtResource("1_42d4r")
+region_enabled = true
+region_rect = Rect2(12, 524, 480, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 8)
+shape = SubResource("RectangleShape2D_xsogq")

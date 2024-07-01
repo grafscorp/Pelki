@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://c1vi6r13d8edx"
+path="res://.godot/imported/shaman_new.atlas-226ab81fe2d27cd678fb0756abcad0bc.spatlas"
+
+[deps]
+
+source_file="res://scenes/entity/npc/shaman/shaman_new.atlas"
+dest_files=["res://.godot/imported/shaman_new.atlas-226ab81fe2d27cd678fb0756abcad0bc.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

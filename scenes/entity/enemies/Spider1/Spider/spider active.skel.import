@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://xsw4glus1xbf"
+path="res://.godot/imported/spider active.skel-41758dbc87013d5bb0cf435b29680d19.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/enemies/Spider1/Spider/spider active.skel"
+dest_files=["res://.godot/imported/spider active.skel-41758dbc87013d5bb0cf435b29680d19.spskel"]
+
+[params]
+

@@ -1,0 +1,14 @@
+big_neutral spirits.png
+size:1517,1130
+filter:Linear,Linear
+pma:true
+eyes1
+bounds:775,581,259,156
+offsets:0,4,259,160
+spiritbody1
+bounds:2,739,389,1513
+offsets:0,0,389,1525
+rotate:90
+spirithead1
+bounds:2,2,771,735
+offsets:0,4,771,739

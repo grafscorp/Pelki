@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=3 uid="uid://qdf7g0h4dai6"]
+
+[ext_resource type="Script" path="res://UI/PauseMenu/game_menu.gd" id="1_qp8ix"]
+[ext_resource type="Script" path="res://UI/QuitMenu/exit_menu.gd" id="2_bi7qk"]
+[ext_resource type="PackedScene" uid="uid://rhqqtlbdxcw2" path="res://UI/StartMenu/profile_change.tscn" id="3_7sfty"]
+
+[node name="GameMenu" type="CanvasLayer" node_paths=PackedStringArray("exitMenu", "menuBTNS", "loadMenu", "playBTN")]
+process_mode = 3
+script = ExtResource("1_qp8ix")
+exitMenu = NodePath("ExitMenu")
+menuBTNS = NodePath("BTN")
+loadMenu = NodePath("ProfileChange")
+playBTN = NodePath("BTN/PlayBTN")
+
+[node name="BackGround" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.411765)
+metadata/_edit_use_anchors_ = true
+
+[node name="BTN" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayBTN" type="Button" parent="BTN"]
+custom_minimum_size = Vector2(650, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "resume_01"
+
+[node name="LoadBTN" type="Button" parent="BTN"]
+custom_minimum_size = Vector2(650, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "loadgame_01"
+
+[node name="SettingBTN" type="Button" parent="BTN"]
+custom_minimum_size = Vector2(650, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "settings_01"
+
+[node name="ExitBTN" type="Button" parent="BTN"]
+custom_minimum_size = Vector2(650, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "exit_01"
+
+[node name="ExitMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 2
+visible = false
+script = ExtResource("2_bi7qk")
+
+[node name="Control" type="Control" parent="ExitMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="ExitMenu/Control"]
+custom_minimum_size = Vector2(1600, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitMenu/Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Empty" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "exit_confirm_01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Empty2" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Empty3" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Empty4" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="ConfirmBTN" type="Button" parent="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "exit_01"
+
+[node name="CancelBTN" type="Button" parent="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "cancel_01"
+
+[node name="ProfileChange" parent="." instance=ExtResource("3_7sfty")]
+layer = 2
+
+[connection signal="pressed" from="BTN/PlayBTN" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="BTN/LoadBTN" to="." method="_on_load_btn_pressed"]
+[connection signal="pressed" from="BTN/SettingBTN" to="." method="_on_setting_btn_pressed"]
+[connection signal="pressed" from="BTN/ExitBTN" to="." method="_on_exit_btn_pressed"]
+[connection signal="QuitCancel" from="ExitMenu" to="." method="_on_exit_menu_quit_cancel"]
+[connection signal="pressed" from="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer/ConfirmBTN" to="ExitMenu" method="_on_confirm_btn_pressed" flags=18]
+[connection signal="pressed" from="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer/CancelBTN" to="ExitMenu" method="_on_cancel_btn_pressed" flags=18]

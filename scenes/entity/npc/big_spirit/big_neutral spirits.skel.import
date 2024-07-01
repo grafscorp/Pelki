@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://dnaymd03qbf0"
+path="res://.godot/imported/big_neutral spirits.skel-32d9176fefd3d26fc3814b5399a96862.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/npc/big_spirit/big_neutral spirits.skel"
+dest_files=["res://.godot/imported/big_neutral spirits.skel-32d9176fefd3d26fc3814b5399a96862.spskel"]
+
+[params]
+

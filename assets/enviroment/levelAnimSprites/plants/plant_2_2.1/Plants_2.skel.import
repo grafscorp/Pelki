@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://dbxyfv8jegg0p"
+path="res://.godot/imported/Plants_2.skel-ddca3579a13fe90b11e8c4c96f64c173.spskel"
+
+[deps]
+
+source_file="res://assets/enviroment/levelAnimSprites/plants/plant_2_2.1/Plants_2.skel"
+dest_files=["res://.godot/imported/Plants_2.skel-ddca3579a13fe90b11e8c4c96f64c173.spskel"]
+
+[params]
+

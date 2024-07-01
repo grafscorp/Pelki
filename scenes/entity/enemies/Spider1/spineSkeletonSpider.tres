@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://dc0ghi0wdc0u7"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://dh0g0x1o1vbsk" path="res://scenes/entity/enemies/Spider1/Spider/spider active.atlas" id="1_nnt47"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://xsw4glus1xbf" path="res://scenes/entity/enemies/Spider1/Spider/spider active.skel" id="2_8nxmr"]
+
+[resource]
+atlas_res = ExtResource("1_nnt47")
+skeleton_file_res = ExtResource("2_8nxmr")

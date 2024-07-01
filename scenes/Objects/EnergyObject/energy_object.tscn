@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfj1gilbh7db7"]
+
+[ext_resource type="PackedScene" uid="uid://d0tm66ubik0jo" path="res://scenes/Objects/classObject/object.tscn" id="1_qq3o6"]
+[ext_resource type="Texture2D" uid="uid://c6bwdhh15hg27" path="res://scenes/Objects/EnergyObject/light 1.png" id="2_dn8s1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gjvsx"]
+
+[node name="EnergyObject" instance=ExtResource("1_qq3o6")]
+typeObject = 1
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_gjvsx")
+
+[node name="Sprite2D" parent="." index="1"]
+modulate = Color(1, 0.32549, 0, 1)
+texture = ExtResource("2_dn8s1")

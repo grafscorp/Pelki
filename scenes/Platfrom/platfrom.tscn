@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxts3fwnoacv0"]
+
+[ext_resource type="Script" path="res://scenes/Platfrom/platfrom.gd" id="1_cknm3"]
+[ext_resource type="Texture2D" uid="uid://4qkuq45xwkqf" path="res://scenes/Platfrom/assets/platform cloud.png" id="2_fu6e8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rabil"]
+size = Vector2(764, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aphrw"]
+size = Vector2(751, 36.5)
+
+[node name="Platfrom" type="CharacterBody2D" node_paths=PackedStringArray("playerDetected", "collisionPlatform")]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("1_cknm3")
+playerDetected = NodePath("PlayerDetected")
+collisionPlatform = NodePath("PlayerDetected/CollisionShape2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fu6e8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 16)
+shape = SubResource("RectangleShape2D_rabil")
+one_way_collision = true
+one_way_collision_margin = 3.4
+
+[node name="PlayerDetected" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetected"]
+position = Vector2(2.5, -30.75)
+shape = SubResource("RectangleShape2D_aphrw")
+debug_color = Color(0.262745, 0.631373, 0, 0.419608)
+
+[connection signal="body_entered" from="PlayerDetected" to="." method="_on_player_detected_body_entered"]

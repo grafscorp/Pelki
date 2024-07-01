@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://cif7y5noxeq5n"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://c2fcqaobfv8ss" path="res://assets/enviroment/levelAnimSprites/Trees/Tree2/tree_2.atlas" id="1_okski"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://ciik766cu85a" path="res://assets/enviroment/levelAnimSprites/Trees/Tree2/tree_2.skel" id="2_5mhwn"]
+
+[resource]
+atlas_res = ExtResource("1_okski")
+skeleton_file_res = ExtResource("2_5mhwn")

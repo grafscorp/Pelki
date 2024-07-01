@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://crs332dvdk7ih"]
+
+[ext_resource type="Script" path="res://scenes/entity/entity.gd" id="1_jyvjy"]
+
+[sub_resource type="Animation" id="Animation_o4weg"]
+resource_name = "attack1"
+
+[sub_resource type="Animation" id="Animation_sum0q"]
+resource_name = "attack2"
+
+[sub_resource type="Animation" id="Animation_kel8y"]
+resource_name = "damage"
+
+[sub_resource type="Animation" id="Animation_h2alp"]
+resource_name = "die"
+
+[sub_resource type="Animation" id="Animation_1nh1f"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_id3g6"]
+resource_name = "idle2"
+
+[sub_resource type="Animation" id="Animation_qtgyb"]
+resource_name = "run"
+
+[sub_resource type="Animation" id="Animation_nevvu"]
+resource_name = "walk"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c5v12"]
+_data = {
+"attack1": SubResource("Animation_o4weg"),
+"attack2": SubResource("Animation_sum0q"),
+"damage": SubResource("Animation_kel8y"),
+"die": SubResource("Animation_h2alp"),
+"idle": SubResource("Animation_1nh1f"),
+"idle2": SubResource("Animation_id3g6"),
+"run": SubResource("Animation_qtgyb"),
+"walk": SubResource("Animation_nevvu")
+}
+
+[node name="Entity" type="CharacterBody2D" node_paths=PackedStringArray("animPlayer")]
+collision_mask = 0
+script = ExtResource("1_jyvjy")
+MAX_SPEED = 500.0
+animPlayer = NodePath("AnimationPlayer")
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+
+[node name="SpineAnimationTrack" type="SpineAnimationTrack" parent="SpineSprite"]
+track_index = 0
+mix_duration = 0.2
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c5v12")
+}
+
+[node name="WaterDetect" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterDetect"]
+debug_color = Color(0.564706, 0.392157, 1, 0.419608)
+
+[node name="WaterCanUp" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterCanUp"]
+debug_color = Color(0.764706, 0.172549, 1, 0.419608)
+
+[connection signal="area_entered" from="WaterDetect" to="." method="_on_water_detect_area_entered"]
+[connection signal="area_exited" from="WaterDetect" to="." method="_on_water_detect_area_exited"]
+[connection signal="area_entered" from="WaterCanUp" to="." method="_on_water_can_up_area_entered"]
+[connection signal="area_exited" from="WaterCanUp" to="." method="_on_water_can_up_area_exited"]

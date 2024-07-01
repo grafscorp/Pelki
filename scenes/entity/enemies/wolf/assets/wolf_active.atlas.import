@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cjq7w6j8de1en"
+path="res://.godot/imported/wolf_active.atlas-ccbe41b9af592dddf1edccb0d408b5fe.spatlas"
+
+[deps]
+
+source_file="res://scenes/entity/enemies/wolf/assets/wolf_active.atlas"
+dest_files=["res://.godot/imported/wolf_active.atlas-ccbe41b9af592dddf1edccb0d408b5fe.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

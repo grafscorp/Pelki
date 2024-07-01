@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7jqfa5i7hlqp"]
+
+[ext_resource type="SpineSkeletonDataResource" uid="uid://bhenht6r41x6t" path="res://scenes/entity/npc/tall_spirit/tall_spirit_SKTLN.tres" id="1_02qj8"]
+
+[node name="NPC" type="Node2D"]
+
+[node name="SpineSprite" type="SpineSprite" parent="."]
+position = Vector2(8, 8)
+skeleton_data_res = ExtResource("1_02qj8")
+preview_skin = "default"
+preview_animation = "look_down"
+preview_frame = false
+preview_time = 0.0

@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://dx61x4wee78t4"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://c1vi6r13d8edx" path="res://scenes/entity/npc/shaman/shaman_new.atlas" id="1_kqjfy"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://c82ad48pqkt54" path="res://scenes/entity/npc/shaman/shaman_new.skel" id="2_j3ph6"]
+
+[resource]
+atlas_res = ExtResource("1_kqjfy")
+skeleton_file_res = ExtResource("2_j3ph6")

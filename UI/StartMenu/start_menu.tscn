@@ -1,0 +1,260 @@
+[gd_scene load_steps=17 format=3 uid="uid://c448k7g32cpfc"]
+
+[ext_resource type="Script" path="res://UI/StartMenu/start_menu.gd" id="1_crlo4"]
+[ext_resource type="Script" path="res://UI/QuitMenu/exit_menu.gd" id="2_l7o1u"]
+[ext_resource type="PackedScene" uid="uid://rhqqtlbdxcw2" path="res://UI/StartMenu/profile_change.tscn" id="3_32h02"]
+[ext_resource type="Texture2D" uid="uid://cpgm4kjcqqqtw" path="res://UI/StartMenu/assets/орн 1.png" id="4_jvayf"]
+[ext_resource type="Texture2D" uid="uid://b7vqb5h0igpfa" path="res://UI/StartMenu/assets/орн 2.png" id="5_nvlle"]
+[ext_resource type="Script" path="res://UI/StartMenu/new_script.gd" id="5_ssrbx"]
+[ext_resource type="Texture2D" uid="uid://dnqclhb0n52nw" path="res://UI/StartMenu/assets/орн 3.png" id="6_6m7wx"]
+[ext_resource type="Texture2D" uid="uid://ceb4lyoa3eb02" path="res://UI/StartMenu/assets/орн 4.png" id="7_myghd"]
+[ext_resource type="Texture2D" uid="uid://cia3mv60n07ti" path="res://UI/StartMenu/assets/орн 5.png" id="8_b2p30"]
+[ext_resource type="Texture2D" uid="uid://bptg8h2a1biw7" path="res://UI/StartMenu/assets/орн 6.png" id="9_q2sc4"]
+[ext_resource type="Texture2D" uid="uid://bvqeh5tani3d7" path="res://UI/StartMenu/assets/орн 7.png" id="10_jvjos"]
+[ext_resource type="Texture2D" uid="uid://biv8ll4u6pfg3" path="res://UI/StartMenu/assets/орн 8.png" id="11_uu7h3"]
+[ext_resource type="Texture2D" uid="uid://pdbf38apdbrg" path="res://UI/StartMenu/assets/орн 9.png" id="12_fw4rl"]
+[ext_resource type="Texture2D" uid="uid://cqd5ib1k7t8vq" path="res://UI/StartMenu/assets/орн 10.png" id="13_012f8"]
+[ext_resource type="Texture2D" uid="uid://dvlako8egbfr8" path="res://UI/StartMenu/assets/орн 11.png" id="14_ws33t"]
+[ext_resource type="Texture2D" uid="uid://05ct7o80vq4o" path="res://UI/StartMenu/assets/орн 12.png" id="15_nv1su"]
+
+[node name="StartMenu" type="Control" node_paths=PackedStringArray("MenuBTNS", "ProfileMenu", "ExitMenu")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_crlo4")
+MenuBTNS = NodePath("BTNMenu")
+ProfileMenu = NodePath("ProfileChange")
+ExitMenu = NodePath("ExitMenu")
+
+[node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6715
+anchor_top = 0.266778
+anchor_right = 0.925781
+anchor_bottom = 0.572667
+offset_left = 0.959961
+offset_top = -0.160004
+offset_right = -0.000244141
+offset_bottom = -0.640076
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 70
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="StartBTN" type="Button" parent="BTNMenu"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Start_01"
+
+[node name="SettingsBTN" type="Button" parent="BTNMenu"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+disabled = true
+text = "Settings_01"
+
+[node name="ExitBTN" type="Button" parent="BTNMenu"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Exit_01"
+
+[node name="WaterSign" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -58.0
+offset_right = 484.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "@developed by grafscorp"
+
+[node name="ExitMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("2_l7o1u")
+
+[node name="Control" type="Control" parent="ExitMenu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="ExitMenu/Control"]
+custom_minimum_size = Vector2(1600, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExitMenu/Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+
+[node name="Empty" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "exit_confirm_01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Empty2" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Empty3" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Empty4" type="Control" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitMenu/Control/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="ConfirmBTN" type="Button" parent="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "exit_01"
+
+[node name="CancelBTN" type="Button" parent="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "cancel_01"
+
+[node name="ProfileChange" parent="." instance=ExtResource("3_32h02")]
+
+[node name="Orn" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="o1" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_jvayf")
+script = ExtResource("5_ssrbx")
+
+[node name="o2" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_nvlle")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[node name="o3" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_6m7wx")
+script = ExtResource("5_ssrbx")
+
+[node name="o4" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_myghd")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[node name="o5" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("8_b2p30")
+script = ExtResource("5_ssrbx")
+
+[node name="o6" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("9_q2sc4")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[node name="o7" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_jvjos")
+script = ExtResource("5_ssrbx")
+
+[node name="o8" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_uu7h3")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[node name="o9" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("12_fw4rl")
+script = ExtResource("5_ssrbx")
+
+[node name="o10" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_012f8")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[node name="o11" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_ws33t")
+script = ExtResource("5_ssrbx")
+
+[node name="o12" type="Sprite2D" parent="Orn"]
+position = Vector2(222.5, 29.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_nv1su")
+script = ExtResource("5_ssrbx")
+speed = -1.0
+
+[connection signal="pressed" from="BTNMenu/StartBTN" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="BTNMenu/ExitBTN" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer/ConfirmBTN" to="ExitMenu" method="_on_confirm_btn_pressed" flags=18]
+[connection signal="pressed" from="ExitMenu/Control/Panel/VBoxContainer/HBoxContainer/CancelBTN" to="ExitMenu" method="_on_cancel_btn_pressed" flags=18]
+[connection signal="LoadCacel" from="ProfileChange" to="." method="_on_profile_change_load_cacel"]

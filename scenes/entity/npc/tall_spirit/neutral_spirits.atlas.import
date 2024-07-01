@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cj3qrjfje5jr7"
+path="res://.godot/imported/neutral_spirits.atlas-e1d66f1cc3917e397731d170934e273a.spatlas"
+
+[deps]
+
+source_file="res://scenes/entity/npc/tall_spirit/neutral_spirits.atlas"
+dest_files=["res://.godot/imported/neutral_spirits.atlas-e1d66f1cc3917e397731d170934e273a.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

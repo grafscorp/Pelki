@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://pfhxswxotc1f"
+path="res://.godot/imported/Plants_2.atlas-e7ea4e9dbaaa8411dcd402afc49c53ac.spatlas"
+
+[deps]
+
+source_file="res://assets/enviroment/levelAnimSprites/plants/plant_2_2.1/Plants_2.atlas"
+dest_files=["res://.godot/imported/Plants_2.atlas-e7ea4e9dbaaa8411dcd402afc49c53ac.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

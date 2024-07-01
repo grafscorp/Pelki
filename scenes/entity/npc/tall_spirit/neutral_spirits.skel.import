@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://ssye6scr6b3b"
+path="res://.godot/imported/neutral_spirits.skel-9c437dea8d136b5e12f8b363e3a811a6.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/npc/tall_spirit/neutral_spirits.skel"
+dest_files=["res://.godot/imported/neutral_spirits.skel-9c437dea8d136b5e12f8b363e3a811a6.spskel"]
+
+[params]
+

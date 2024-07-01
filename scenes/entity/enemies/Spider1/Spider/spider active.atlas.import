@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://dh0g0x1o1vbsk"
+path="res://.godot/imported/spider active.atlas-abc004b3b1c8404fe817dd788dd1a894.spatlas"
+
+[deps]
+
+source_file="res://scenes/entity/enemies/Spider1/Spider/spider active.atlas"
+dest_files=["res://.godot/imported/spider active.atlas-abc004b3b1c8404fe817dd788dd1a894.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

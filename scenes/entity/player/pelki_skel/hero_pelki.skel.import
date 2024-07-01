@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://blpbumgfq8flf"
+path="res://.godot/imported/hero_pelki.skel-ff3f902b00569d99e594354a3b95afbe.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/player/pelki_skel/hero_pelki.skel"
+dest_files=["res://.godot/imported/hero_pelki.skel-ff3f902b00569d99e594354a3b95afbe.spskel"]
+
+[params]
+

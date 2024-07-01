@@ -1,0 +1,17 @@
+neutral_spirits.png
+size:1128,171
+filter:Linear,Linear
+pma:true
+eyes2
+bounds:1023,2,103,111
+spirit_arm_L
+bounds:801,55,58,220
+offsets:0,2,63,228
+rotate:90
+spirit_arm_r
+bounds:801,115,54,227
+offsets:0,2,56,233
+rotate:90
+spirithead2
+bounds:2,2,167,797
+rotate:90

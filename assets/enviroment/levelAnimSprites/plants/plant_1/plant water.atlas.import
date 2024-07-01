@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://t0avfaxxanbh"
+path="res://.godot/imported/plant water.atlas-5821a95c75c86e135dda08df3aa39508.spatlas"
+
+[deps]
+
+source_file="res://assets/enviroment/levelAnimSprites/plants/plant_1/plant water.atlas"
+dest_files=["res://.godot/imported/plant water.atlas-5821a95c75c86e135dda08df3aa39508.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

@@ -1,0 +1,24 @@
+skeleton.png
+size:1768,555
+filter:Linear,Linear
+pma:true
+tree trunk_1
+bounds:2,227,326,738
+rotate:90
+tree_crown_1/tree_crown_1
+bounds:2,9,276,216
+tree_crown_2/tree_crown_2
+bounds:280,2,223,260
+rotate:90
+tree_crown_3/tree_crown_3
+bounds:1527,3,229,247
+tree_crown_4/tree_crown_4
+bounds:1527,252,239,301
+offsets:0,0,240,301
+tree_crown_5/tree_crown_5
+bounds:742,80,378,473
+offsets:1,0,379,474
+tree_crown_6/tree_crown_6
+bounds:1122,138,415,403
+offsets:0,0,422,403
+rotate:90

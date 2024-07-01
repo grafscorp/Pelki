@@ -1,0 +1,10 @@
+neutral_spirits.png
+size:304,202
+filter:Linear,Linear
+pma:true
+eyes4
+bounds:166,17,183,136
+rotate:90
+spiritbody4
+bounds:2,2,162,198
+offsets:2,2,166,203

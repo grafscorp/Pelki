@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ps5ccro24iax"]
+
+[ext_resource type="PackedScene" uid="uid://dujrc3fbi4832" path="res://worlds/StartLevel/Tiles/tile_cube_2.tscn" id="1_ktb6v"]
+
+[node name="TileCube3" instance=ExtResource("1_ktb6v")]
+
+[node name="Cu" parent="." index="0"]
+position = Vector2(-4, 8)
+scale = Vector2(1, 1.1)
+region_rect = Rect2(0, 80, 480, 400)

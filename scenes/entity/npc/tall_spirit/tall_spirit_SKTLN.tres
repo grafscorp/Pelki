@@ -1,0 +1,8 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=3 uid="uid://bhenht6r41x6t"]
+
+[ext_resource type="SpineAtlasResource" uid="uid://cj3qrjfje5jr7" path="res://scenes/entity/npc/tall_spirit/neutral_spirits.atlas" id="1_pdq32"]
+[ext_resource type="SpineSkeletonFileResource" uid="uid://ssye6scr6b3b" path="res://scenes/entity/npc/tall_spirit/neutral_spirits.skel" id="2_l3bl8"]
+
+[resource]
+atlas_res = ExtResource("1_pdq32")
+skeleton_file_res = ExtResource("2_l3bl8")

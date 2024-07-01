@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://rhqqtlbdxcw2"]
+
+[ext_resource type="Script" path="res://UI/StartMenu/profile_change.gd" id="1_tipyg"]
+
+[node name="ProfileChange" type="CanvasLayer"]
+process_mode = 3
+visible = false
+script = ExtResource("1_tipyg")
+demo_level = "res://worlds/StartLevel/start_level.tscn"
+
+[node name="BackBTN" type="Button" parent="."]
+custom_minimum_size = Vector2(325, 100)
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.0444444
+anchor_right = 0.025
+anchor_bottom = 0.0444444
+offset_right = 325.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 60
+text = "back_01"
+metadata/_edit_use_anchors_ = true
+
+[node name="Profiles" type="HBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 400
+metadata/_edit_use_anchors_ = true
+
+[node name="Profile1" type="Button" parent="Profiles"]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "new_game_01"
+
+[node name="Profile2" type="Button" parent="Profiles"]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "new_game_01"
+
+[node name="Profile3" type="Button" parent="Profiles"]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "new_game_01"
+
+[connection signal="pressed" from="BackBTN" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Profiles/Profile1" to="." method="_on_profile_1_pressed"]
+[connection signal="pressed" from="Profiles/Profile2" to="." method="_on_profile_2_pressed"]
+[connection signal="pressed" from="Profiles/Profile3" to="." method="_on_profile_3_pressed"]

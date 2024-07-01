@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://dmipgli3i4ky5"
+path="res://.godot/imported/wolf_passive.skel-4231427c230a460d764333bf27b18d39.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/enemies/wolf_passive/assets/wolf_passive.skel"
+dest_files=["res://.godot/imported/wolf_passive.skel-4231427c230a460d764333bf27b18d39.spskel"]
+
+[params]
+

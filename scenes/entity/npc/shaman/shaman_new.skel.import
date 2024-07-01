@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+uid="uid://c82ad48pqkt54"
+path="res://.godot/imported/shaman_new.skel-4de722f0c64faa5badeec420ea7dba83.spskel"
+
+[deps]
+
+source_file="res://scenes/entity/npc/shaman/shaman_new.skel"
+dest_files=["res://.godot/imported/shaman_new.skel-4de722f0c64faa5badeec420ea7dba83.spskel"]
+
+[params]
+

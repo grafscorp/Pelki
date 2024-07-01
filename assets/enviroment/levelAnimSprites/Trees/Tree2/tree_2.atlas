@@ -1,0 +1,23 @@
+tree_2.png
+size:1366,612
+filter:Linear,Linear
+pma:true
+tree trunk_2
+bounds:2,407,203,774
+offsets:8,6,219,788
+rotate:90
+tree_crown_1/tree_crown_1
+bounds:899,31,276,216
+rotate:90
+tree_crown_2/tree_crown_2
+bounds:1141,350,223,260
+tree_crown_3/tree_crown_3
+bounds:1117,60,229,247
+tree_crown_4/tree_crown_4
+bounds:899,309,240,301
+tree_crown_5/tree_crown_5
+bounds:2,26,379,474
+rotate:90
+tree_crown_6/tree_crown_6
+bounds:478,2,419,403
+offsets:0,0,422,403

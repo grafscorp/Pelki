@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://cpnxdju57uksw"
+path="res://.godot/imported/skeleton.atlas-2c71fa5837f392c3b60314a4d8d4e974.spatlas"
+
+[deps]
+
+source_file="res://assets/enviroment/levelAnimSprites/Trees/Tree1/skeleton.atlas"
+dest_files=["res://.godot/imported/skeleton.atlas-2c71fa5837f392c3b60314a4d8d4e974.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

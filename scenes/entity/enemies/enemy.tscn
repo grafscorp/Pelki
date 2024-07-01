@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf3y7sguwfver"]
+
+[ext_resource type="PackedScene" uid="uid://crs332dvdk7ih" path="res://scenes/entity/entity.tscn" id="1_hbkpi"]
+[ext_resource type="Script" path="res://scenes/entity/enemies/enemy.gd" id="2_kox2y"]
+
+[node name="Enemy" node_paths=PackedStringArray("attackZone", "attackZoneCollision", "playerDetected", "areaFollowing", "rayCanMove") instance=ExtResource("1_hbkpi")]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("2_kox2y")
+energyRecovery = 1.0
+attackZone = NodePath("AttackZone1")
+attackZoneCollision = NodePath("AttackZone1/CollisionShape2D")
+distanceForAttack1 = 1.0
+energyAttack1 = 30.0
+energyAttack2 = 40.0
+playerDetected = NodePath("PlayerDetect/CollisionShape2D")
+areaFollowing = NodePath("PlayerFollowing/CollisionShape2D")
+rayCanMove = NodePath("RayCast2D")
+
+[node name="AttackZone1" type="Area2D" parent="." index="3"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackZone1" index="0"]
+debug_color = Color(0.772549, 0, 0.211765, 0.419608)
+
+[node name="PlayerDetect" type="Area2D" parent="." index="4"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect" index="0"]
+debug_color = Color(0.627451, 0.529412, 0, 0.419608)
+
+[node name="PlayerFollowing" type="Area2D" parent="." index="5"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFollowing" index="0"]
+debug_color = Color(0.627451, 0.529412, 0, 0.419608)
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="7"]
+position = Vector2(-384, -192)
+target_position = Vector2(0, 320)
+
+[connection signal="body_entered" from="AttackZone1" to="." method="_on_attack_zone_1_body_entered"]
+[connection signal="body_entered" from="PlayerDetect" to="." method="_on_player_detect_body_entered"]
+[connection signal="body_exited" from="PlayerDetect" to="." method="_on_player_detect_body_exited"]
+[connection signal="body_exited" from="PlayerFollowing" to="." method="_on_player_following_body_exited"]

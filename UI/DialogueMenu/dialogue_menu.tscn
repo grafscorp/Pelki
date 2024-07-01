@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3q2k0cjf7sn3"]
+
+[ext_resource type="Texture2D" uid="uid://bmbcgtx0g8ggl" path="res://UI/DialogueMenu/DialoguePanel2.png" id="1_6c8ph"]
+[ext_resource type="Script" path="res://UI/DialogueMenu/dialogue_menu.gd" id="1_ntn5j"]
+
+[node name="DialogueMenu" type="CanvasLayer" node_paths=PackedStringArray("DText", "NText", "DTimer", "NamePanel")]
+script = ExtResource("1_ntn5j")
+DText = NodePath("DialogueMenu/RichTextLabel")
+NText = NodePath("DialogueMenu/Panel/Label")
+DTimer = NodePath("Timer")
+NamePanel = NodePath("DialogueMenu/Panel")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="DialogueMenu" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.378711
+anchor_top = 1.0
+anchor_right = 0.627539
+anchor_bottom = 1.06875
+offset_left = -257.5
+offset_top = -304.0
+offset_right = 257.5
+offset_bottom = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_6c8ph")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="DialogueMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.145833
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="DialogueMenu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -13.0
+offset_right = 23.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.0
+offset_top = -80.5
+offset_right = 512.0
+offset_bottom = 71.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+text = "text"
+
+[node name="SkipDialogue" type="Button" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1056.0
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+flat = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="SkipDialogue" to="." method="_on_skip_dialogue_pressed"]

@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfrm1ajejjm2l"]
+
+[ext_resource type="PackedScene" uid="uid://d0tm66ubik0jo" path="res://scenes/Objects/classObject/object.tscn" id="1_6t23m"]
+[ext_resource type="Script" path="res://scenes/Objects/DangerObjects/Crown/d_crown.gd" id="2_sn3u6"]
+[ext_resource type="Texture2D" uid="uid://63f2q4swajtf" path="res://scenes/Objects/DangerObjects/Crown/thorn.png" id="2_vkc86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js4is"]
+size = Vector2(363, 223)
+
+[sub_resource type="Animation" id="Animation_2q0w6"]
+resource_name = "Die"
+length = 0.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nkjv3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pk1ie"]
+_data = {
+"Die": SubResource("Animation_2q0w6"),
+"RESET": SubResource("Animation_nkjv3")
+}
+
+[node name="DCrown" instance=ExtResource("1_6t23m")]
+collision_layer = 4
+monitorable = true
+script = ExtResource("2_sn3u6")
+typeObject = 3
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(12.5, -118.5)
+shape = SubResource("RectangleShape2D_js4is")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -122)
+texture = ExtResource("2_vkc86")
+region_enabled = true
+region_rect = Rect2(52, 27, 404, 240)
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_pk1ie")
+}

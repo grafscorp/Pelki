@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgo36jjdlwabb"]
+
+[ext_resource type="PackedScene" uid="uid://dujrc3fbi4832" path="res://worlds/StartLevel/Tiles/tile_cube_2.tscn" id="1_80pku"]
+
+[node name="TileCube2" instance=ExtResource("1_80pku")]
+
+[node name="Cu" parent="." index="0"]
+region_rect = Rect2(20, 1056, 480, 480)

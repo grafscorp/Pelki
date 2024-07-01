@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg8ir88v7wfvj"]
+
+[ext_resource type="Script" path="res://scenes/WaterTest/scripts/water_test.gd" id="1_8yx0y"]
+[ext_resource type="Script" path="res://scenes/WaterTest/smooth_path.gd" id="2_isg5o"]
+[ext_resource type="Shader" path="res://scenes/WaterTest/water_test.gdshader" id="2_ok31o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30i6w"]
+shader = ExtResource("2_ok31o")
+shader_parameter/tint = Color(1, 1, 1, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_d038f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kee6f"]
+
+[node name="WaterTest" type="Node2D" node_paths=PackedStringArray("water_polygon", "water_border", "collisionShape", "water_body_area")]
+script = ExtResource("1_8yx0y")
+water_polygon = NodePath("Polygon2D")
+water_border = NodePath("WaterBorder")
+collisionShape = NodePath("AreaWater/CollisionShape2D")
+water_body_area = NodePath("AreaWater")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_30i6w")
+color = Color(0, 1, 1, 1)
+
+[node name="WaterBorder" type="Path2D" parent="."]
+curve = SubResource("Curve2D_d038f")
+script = ExtResource("2_isg5o")
+
+[node name="AreaWater" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaWater"]
+shape = SubResource("RectangleShape2D_kee6f")
+debug_color = Color(0.462745, 0.443137, 1, 0.419608)

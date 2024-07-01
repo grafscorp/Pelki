@@ -1,0 +1,15 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+uid="uid://b43d88nj51w0e"
+path="res://.godot/imported/hero_pelki.atlas-4a6b742c83b09025912a32b32149eba2.spatlas"
+
+[deps]
+
+source_file="res://scenes/entity/player/pelki_skel/hero_pelki.atlas"
+dest_files=["res://.godot/imported/hero_pelki.atlas-4a6b742c83b09025912a32b32149eba2.spatlas"]
+
+[params]
+
+normal_map_prefix="n"

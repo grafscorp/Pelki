@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://p8s6qv87twjj"]
+
+[ext_resource type="SpineSkeletonDataResource" uid="uid://dj5r2nm47tclf" path="res://assets/enviroment/levelAnimSprites/Trees/Tree1/tree1Skeleton.tres" id="1_h8556"]
+
+[node name="Tree1" type="SpineSprite"]
+skeleton_data_res = ExtResource("1_h8556")
+preview_skin = "tree_crown_2"
+preview_animation = "tree1"
+preview_frame = false
+preview_time = 0.0

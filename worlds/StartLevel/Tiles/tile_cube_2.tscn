@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dujrc3fbi4832"]
+
+[ext_resource type="PackedScene" uid="uid://dapfrs7jj7yop" path="res://worlds/StartLevel/Tiles/tile_cube_1.tscn" id="1_w1xdh"]
+
+[node name="TileCube2" instance=ExtResource("1_w1xdh")]
+
+[node name="Cu" parent="." index="0"]
+region_rect = Rect2(0, 0, 480, 480)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-4, 8)
